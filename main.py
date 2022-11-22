@@ -1,6 +1,6 @@
 import os, sys
-PLAY32DEV_PATH = "/run/media/dreagonmon/Data/Code/Python/play32-dev" # replace to your path
-APP_NAME_ID = "play32app_template"
+PLAY32DEV_PATH = "../play32-dev" # replace to your path
+APP_NAME_ID = "muyu"
 sys.path.append(PLAY32DEV_PATH)
 import play32env
 if __name__ == "__main__":
