@@ -4,8 +4,7 @@ from play32sys import app, path
 from buildin_resource.font import get_font_8px
 from ui.select import select_menu, select_list
 from ui.dialog import dialog
-from play32hw.cpu import cpu_speed_context, VERY_SLOW, FAST
-from machine import lightsleep
+from play32hw.cpu import cpu_speed_context, VERY_SLOW, FAST, sleep
 FONT_8 = get_font_8px()
 WHITE = framebuf_helper.get_white_color(hal_screen.get_format())
 
@@ -233,7 +232,7 @@ def muyu_loop():
                     elif key == hal_keypad.KEY_B:
                         return
             if not muyu_render():
-                lightsleep(10)
+                sleep(10)
 
 UPGRADE_MENU = ["升级等级", "减少自动敲击间隔", "提高暴击率"]
 def upgrade_menu():
